@@ -46,7 +46,7 @@ class MyBot(discord.Client):
             await message.channel.send(chat_response.text)
 
     async def save_chat_history(self):
-        with open("chat_history.txt", "w") as f:
+        with open("chat_history.txt", "a") as f:
             for entry in self.chat_history:
                 f.write(entry)
 
