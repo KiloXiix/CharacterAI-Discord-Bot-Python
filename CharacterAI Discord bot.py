@@ -49,9 +49,11 @@ class MyBot(discord.Client):
         with open("chat_history.txt", "a") as f:
             for entry in self.chat_history:
                 f.write(entry)
+        self.chat_history.clear()
 
 async def main():
     client = MyBot(intents=intents)
     await client.start(TOKEN)
 
 asyncio.run(main())
+
