@@ -3,9 +3,9 @@ import discord
 from characterai import aiocai
 
 # Replace these with your actual values
-char_id = 'Input your characterai character id here'
-CHATOKEN = 'input your characterai login token here '
-TOKEN = "Input your discord bot token here"
+char_id = 'Input Your Characterai Character ID'
+CHATOKEN = 'Input Your Characterai Login Token'
+TOKEN = "Input Your Discord Bot Token"
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -56,4 +56,3 @@ async def main():
     await client.start(TOKEN)
 
 asyncio.run(main())
-
